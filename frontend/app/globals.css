@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: [ "latte"];
+}
+
+@theme {
+  --color-peach: #EF9C66;
+  --color-yellow: #FCDC94;
+  --color-mint: #C8CFA0;
+  --color-turquoise: #78ABA8;
+  --color-peach-dark: #e88a52;
+  --color-yellow-dark: #f5d07f;
+  --color-mint-dark: #b8c190;
+  --color-turquoise-dark: #6a9d9a;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-inter), system-ui, sans-serif;
+    background-color: #FAF1E3;
+  }
+}
+
+@layer utilities {
+  .bg-peach {
+    background-color: var(--color-peach);
+  }
+  .bg-yellow {
+    background-color: var(--color-yellow);
+  }
+  .bg-mint {
+    background-color: var(--color-mint);
+  }
+  .bg-turquoise {
+    background-color: var(--color-turquoise);
+  }
+}
+
+@layer components {
+  /* Markdown styles for notes */
+  .prose ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose li {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .prose p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .prose strong {
+    font-weight: 600;
+  }
+
+  .prose em {
+    font-style: italic;
+  }
+}
