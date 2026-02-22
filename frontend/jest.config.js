@@ -11,6 +11,8 @@ const customJestConfig = {
   testEnvironment: "jest-environment-jsdom",
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
+    // Stub ESM-only packages that Jest struggles to transform
+    "^react-markdown$": "<rootDir>/test/__mocks__/react-markdown.tsx",
   },
   collectCoverageFrom: [
     "app/**/*.{js,jsx,ts,tsx}",

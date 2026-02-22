@@ -36,3 +36,12 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: jest.fn(),
   })),
 });
+
+// Mock react-markdown (ESM) to avoid Jest ESM transform issues
+jest.mock("react-markdown", () => {
+  const React = require("react");
+  return {
+    __esModule: true,
+    default: ({ children }) => React.createElement("div", null, children),
+  };
+});
