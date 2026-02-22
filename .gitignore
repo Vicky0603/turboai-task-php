@@ -7,6 +7,7 @@ __pycache__/
 .Python
 venv/
 env/
+.venv/
 ENV/
 *.egg-info/
 dist/
@@ -57,3 +58,28 @@ pnpm-debug.log*
 lerna-debug.log*
 # Ignore Windows alternate stream sidecar files accidentally saved
 *.Zone.Identifier
+
+# Python (extra)
+.eggs/
+pip-wheel-metadata/
+share/python-wheels/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.pyrightcache/
+.python-version
+.ipynb_checkpoints/
+
+# Coverage (extra)
+.coverage.*
+coverage.xml
+
+# Node/Next (extra)
+.vercel/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
